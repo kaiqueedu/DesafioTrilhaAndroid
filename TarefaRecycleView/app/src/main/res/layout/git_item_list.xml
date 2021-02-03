@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/repo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="repo_name"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/star_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/repo_name"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/star_icon" />
+
+        <TextView
+            android:id="@+id/star_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="10000"
+            android:layout_below="@+id/repo_name"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/star_icon"
+            android:layout_marginLeft="15dp"
+            />
+
+        <ImageView
+            android:id="@+id/fork_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/repo_name"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@id/star_total"
+            android:src="@drawable/fork_icon" />
+
+        <TextView
+            android:id="@+id/fork_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="10000"
+            android:layout_below="@+id/repo_name"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/fork_icon"
+            android:layout_marginLeft="15dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="50dp"
+
+            >
+                <ImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@mipmap/ic_launcher_round" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/author"
+            android:hint="Author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/star_icon"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
