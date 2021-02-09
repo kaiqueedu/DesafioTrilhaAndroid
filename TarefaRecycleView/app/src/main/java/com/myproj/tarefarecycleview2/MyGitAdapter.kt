@@ -13,6 +13,7 @@ import com.squareup.picasso.Picasso
 
 class MyGitAdapter(var myGitData: Array<MyGitData>, activity: MainActivity) : RecyclerView.Adapter<MyGitAdapter.ViewHolder>() {
 
+    //TODO: não precisa enviar o contexto, usar callbacks
     var context: Context
 
     init {
@@ -27,7 +28,8 @@ class MyGitAdapter(var myGitData: Array<MyGitData>, activity: MainActivity) : Re
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val myGitDataList = myGitData[position]
-
+        //TODO: Geralmente essa definicão fica dentro do ViewHolder, geralmente a gente chama uma
+        // funcão bind passando o item selecionado na linha acima
         holder.textViewAuthor.text = myGitDataList.author
         holder.textViewRepositoryName.text = myGitDataList.repositoryName
         holder.textViewTotalForks.text =  "${myGitDataList.totalForks}"
@@ -52,6 +54,7 @@ class MyGitAdapter(var myGitData: Array<MyGitData>, activity: MainActivity) : Re
         var textViewTotalForks: TextView
         var textViewTotalStars: TextView
 
+        //TODO: não precisa do init
         init {
             imgAvatar = itemView.findViewById(R.id.img_avatar)
             textViewAuthor = itemView.findViewById(R.id.author)
