@@ -36,6 +36,7 @@ class MyGitAdapter(var myGitData: Array<MyGitData>, activity: MainActivity) : Re
         holder.textViewTotalStars.text =  "${myGitDataList.totalStars}"
         holder.imgAvatar.setImageResource(myGitDataList.imgAvatar!!)
 
+        //TODO: usar os strings.xml, pesquisar como concatenar strings de forma dinamica (string builder)
         holder.itemView.setOnClickListener {
             Toast.makeText(context, myGitDataList.repositoryName,
                     Toast.LENGTH_SHORT).show()
