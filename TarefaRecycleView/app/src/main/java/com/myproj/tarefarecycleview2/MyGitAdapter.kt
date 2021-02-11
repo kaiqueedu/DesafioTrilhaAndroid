@@ -11,14 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 
-class MyGitAdapter(var myGitData: Array<MyGitData>, activity: MainActivity) : RecyclerView.Adapter<MyGitAdapter.ViewHolder>() {
-
-    //TODO: não precisa enviar o contexto, usar callbacks
-    var context: Context
-
-    init {
-        context = activity
-    }
+class MyGitAdapter(var myGitData: Array<MyGitData>, val myCallBack:(rest: String) -> Unit) : RecyclerView.Adapter<MyGitAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -38,8 +31,7 @@ class MyGitAdapter(var myGitData: Array<MyGitData>, activity: MainActivity) : Re
 
         //TODO: usar os strings.xml, pesquisar como concatenar strings de forma dinamica (string builder)
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, myGitDataList.repositoryName,
-                    Toast.LENGTH_SHORT).show()
+            myCallBack.invoke("${myGitDataList.repositoryName}")
         }
 
     }

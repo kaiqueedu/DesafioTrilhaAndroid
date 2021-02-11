@@ -1,6 +1,7 @@
 package com.myproj.tarefarecycleview2
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -28,10 +29,14 @@ class MainActivity : AppCompatActivity() {
                 MyGitData("Chesperito", "Projeto 6", 321, 142, R.drawable.ge_img),
                 MyGitData("El Chavo", "Projeto 7", 123, 10000, R.drawable.git_img)
         )
-        //TODO: usar callback para o click no item
-        val myGitAdapter = MyGitAdapter(myGitData, this@MainActivity)
+
+        val myGitAdapter = MyGitAdapter(myGitData, ::myCallBack)
         recyclerView.adapter = myGitAdapter
 
+    }
+
+    fun myCallBack(res: String){
+        Toast.makeText(this, res, Toast.LENGTH_SHORT).show()
     }
 
     //TODO: criar metodos para cada acao feita no onCreate, deixe ele mais limpo
