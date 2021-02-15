@@ -41,21 +41,11 @@ class MyGitAdapter(var myGitData: List<MyGitData>, val myCallBack:(rest: String)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgAvatar: ImageView
-        var textViewAuthor: TextView
-        var textViewRepositoryName: TextView
-        var textViewTotalForks: TextView
-        var textViewTotalStars: TextView
-
-        //TODO: não precisa do init
-        init {
-            imgAvatar = itemView.findViewById(R.id.img_avatar)
-            textViewAuthor = itemView.findViewById(R.id.author)
-            textViewRepositoryName = itemView.findViewById(R.id.repo_name)
-            textViewTotalForks = itemView.findViewById(R.id.fork_total)
-            textViewTotalStars = itemView.findViewById(R.id.star_total)
-        }
-
+        var imgAvatar: ImageView = itemView.findViewById(R.id.img_avatar)
+        var textViewAuthor: TextView = itemView.findViewById(R.id.author)
+        var textViewRepositoryName: TextView = itemView.findViewById(R.id.repo_name)
+        var textViewTotalForks: TextView = itemView.findViewById(R.id.fork_total)
+        var textViewTotalStars: TextView = itemView.findViewById(R.id.star_total)
     }
 
 }
