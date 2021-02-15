@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 
-class MyGitAdapter(var myGitData: Array<MyGitData>, val myCallBack:(rest: String) -> Unit) : RecyclerView.Adapter<MyGitAdapter.ViewHolder>() {
+class MyGitAdapter(var myGitData: List<MyGitData>, val myCallBack:(rest: String) -> Unit) : RecyclerView.Adapter<MyGitAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
