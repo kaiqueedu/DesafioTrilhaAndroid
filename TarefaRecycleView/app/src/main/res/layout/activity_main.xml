@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- So tém isso na sua tela, então tu poderia colcoar somente o  RecyclerView -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.recyclerview.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    layout_height="wrap_content"
+    layout_width="wrap_content"
+    android:id="@+id/main_recycleview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    tools:listitem="@layout/git_item_list" />
 
-    <!-- Procurar sobre o tools:listItem do RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_recycleview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-</LinearLayout>
