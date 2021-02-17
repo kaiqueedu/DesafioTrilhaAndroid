@@ -1,4 +1,4 @@
-package com.myproj.tarefarecycleview2
+package com.myproj.tarefarecycleview2.models
 
 import androidx.annotation.DrawableRes
 
@@ -8,7 +8,6 @@ data class MyGitData(var author: String? = null,
                      var totalStars: Int? = null,
                      @DrawableRes
                      var imgAvatar: Int? = null) {
-
 
 }
 
