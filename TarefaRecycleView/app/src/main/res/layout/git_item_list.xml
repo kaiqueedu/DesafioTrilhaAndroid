@@ -3,94 +3,84 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="10dp"
-    app:cardUseCompatPadding="true"
-    >
+    app:cardUseCompatPadding="true">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="match_parent" >
 
         <TextView
-            android:id="@+id/repo_name"
+            android:id="@+id/item_repository_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="repo_name"
-            android:textColor="#000"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
+            tools:text="Repository name"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/star_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_below="@+id/repo_name"
-            android:layout_marginTop="10dp"
+            android:id="@+id/item_star_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/item_repository_name"
+            app:layout_constraintStart_toStartOf="@id/item_repository_name"
             android:src="@drawable/star_icon" />
 
         <TextView
-            android:id="@+id/star_total"
+            android:id="@+id/item_star_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="10000"
-            android:layout_below="@+id/repo_name"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/star_icon"
-            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/item_repository_name"
+            android:layout_toEndOf="@id/item_star_icon"
+            tools:text="38013"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/item_star_icon"
+            app:layout_constraintTop_toTopOf="@id/item_star_icon"
             />
 
         <ImageView
-            android:id="@+id/fork_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_below="@+id/repo_name"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_toEndOf="@id/star_total"
+            android:id="@+id/item_fork_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            app:layout_constraintStart_toEndOf="@id/item_star_total"
+            app:layout_constraintTop_toTopOf="@id/item_star_icon"
+            android:layout_marginStart="25dp"
             android:src="@drawable/fork_icon" />
 
         <TextView
-            android:id="@+id/fork_total"
+            android:id="@+id/item_fork_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="10000"
-            android:layout_below="@+id/repo_name"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/fork_icon"
-            android:layout_marginLeft="15dp"
-            />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/myCardView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
-            app:cardCornerRadius="50dp"
-
-            >
-                <ImageView
-                    android:id="@+id/img_avatar"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:src="@mipmap/ic_launcher_round" />
-
-        </androidx.cardview.widget.CardView>
-
-
+            app:layout_constraintStart_toEndOf="@id/item_fork_icon"
+            app:layout_constraintTop_toTopOf="@id/item_fork_icon"
+            tools:text="10507"
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/author"
-            android:hint="Author"
+            android:id="@+id/item_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_below="@id/star_icon"
-            />
+            tools:text="Author"
+            app:layout_constraintStart_toStartOf="@id/item_star_icon"
+            app:layout_constraintTop_toBottomOf="@id/item_star_icon" />
+
+        <ImageView
+            android:id="@+id/item_img_avatar"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="8dp"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

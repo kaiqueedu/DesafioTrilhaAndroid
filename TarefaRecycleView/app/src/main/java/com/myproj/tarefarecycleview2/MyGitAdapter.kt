@@ -1,3 +1,4 @@
+
 package com.myproj.tarefarecycleview2
 
 import android.view.LayoutInflater
@@ -38,11 +39,11 @@ class MyGitAdapter(var myGitData: List<MyGitData>, val myCallBack:(rest: String)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgAvatar: ImageView = itemView.findViewById(R.id.img_avatar)
-        var textViewAuthor: TextView = itemView.findViewById(R.id.author)
-        var textViewRepositoryName: TextView = itemView.findViewById(R.id.repo_name)
-        var textViewTotalForks: TextView = itemView.findViewById(R.id.fork_total)
-        var textViewTotalStars: TextView = itemView.findViewById(R.id.star_total)
+        var imgAvatar: ImageView = itemView.findViewById(R.id.item_img_avatar)
+        var textViewAuthor: TextView = itemView.findViewById(R.id.item_author)
+        var textViewRepositoryName: TextView = itemView.findViewById(R.id.item_repository_name)
+        var textViewTotalForks: TextView = itemView.findViewById(R.id.item_fork_total)
+        var textViewTotalStars: TextView = itemView.findViewById(R.id.item_star_total)
     }
 
 }

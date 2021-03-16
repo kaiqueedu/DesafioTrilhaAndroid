@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.main_recycleview)
         //TODO: procurar saber o que o setHasFixedSize faz na sua listagem
-        recyclerView.setHasFixedSize(true)
+        //recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val myGitData = carregaLista()
