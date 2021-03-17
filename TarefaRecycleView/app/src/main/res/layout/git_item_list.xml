@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_cardview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="10dp"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,17 +41,19 @@
             android:layout_toEndOf="@id/item_star_icon"
             tools:text="38013"
             android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/item_star_icon"
-            app:layout_constraintTop_toTopOf="@id/item_star_icon"
-            />
+            app:layout_constraintTop_toTopOf="@id/item_star_icon" />
 
         <ImageView
             android:id="@+id/item_fork_icon"
             android:layout_width="26dp"
             android:layout_height="26dp"
-            app:layout_constraintStart_toEndOf="@id/item_star_total"
+            app:layout_constraintStart_toEndOf="@id/item_star_icon"
             app:layout_constraintTop_toTopOf="@id/item_star_icon"
-            android:layout_marginStart="25dp"
+            app:layout_constraintEnd_toStartOf="@id/item_img_avatar"
+            app:layout_constraintHorizontal_bias="0.3"
             android:src="@drawable/fork_icon" />
 
         <TextView
@@ -60,6 +63,8 @@
             app:layout_constraintStart_toEndOf="@id/item_fork_icon"
             app:layout_constraintTop_toTopOf="@id/item_fork_icon"
             tools:text="10507"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:textSize="18sp" />
 
         <TextView
@@ -67,6 +72,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Author"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/item_star_icon"
             app:layout_constraintTop_toBottomOf="@id/item_star_icon" />
 

@@ -7,5 +7,3 @@ class MyGitDataFactory {
                 MyGitData(author, repoName, totalForks, totalStart, img)
     }
 }
-
-//  Ainda nao pensei uma forma correta de usar o factory nesse caso.
