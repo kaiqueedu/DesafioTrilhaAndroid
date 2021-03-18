@@ -1,10 +1,12 @@
-package com.myproj.tarefarecycleview2
+package com.myproj.tarefarecycleview2.activities
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.myproj.tarefarecycleview2.MyGitAdapter
+import com.myproj.tarefarecycleview2.R
 import com.myproj.tarefarecycleview2.models.MyGitData
 import com.myproj.tarefarecycleview2.models.MyGitDataFactory
 
@@ -41,10 +43,12 @@ class MainActivity : AppCompatActivity() {
                 MyGitDataFactory.getMyGitData("El Chavo", "Projeto 7", 5, 10000, R.drawable.git_img) )
     }
 
-    private fun myCallBack(res: String){
-        Toast.makeText(this, res, Toast.LENGTH_SHORT).show()
+    private fun myCallBack(data: MyGitData){
+        var intent = Intent(this, GitInformationAtitivity::class.java)
+        intent.putExtra("git", data)
+        startActivity(intent)
+        //Toast.makeText(this, res, Toast.LENGTH_SHORT).show()
     }
 
-    //TODO: criar metodos para cada acao feita no onCreate, deixe ele mais limpo
     //TODO: procure usar os outros metodos do ciclo de vida1
 }
