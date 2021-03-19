@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.GitInformationAtitivity">
+    tools:context=".activities.GitInformationAtitivity" >
 
 
     <ImageView
@@ -46,11 +46,12 @@
         android:id="@+id/git_img"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/git_img_avatar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_bias="0.0"
         android:src="@drawable/github_img" />
 
     <TextView

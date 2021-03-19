@@ -3,6 +3,7 @@ package com.myproj.tarefarecycleview2.activities
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.myproj.tarefarecycleview2.MyGitAdapter
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = configuraRecyclerView()
         val myGitData = carregaLista()
-        val myGitAdapter = MyGitAdapter(myGitData, ::myCallBack)
+        val myGitAdapter = MyGitAdapter(myGitData, this, ::myCallBack)
         recyclerView.adapter = myGitAdapter
 
     }
@@ -28,7 +29,6 @@ class MainActivity : AppCompatActivity() {
     private fun configuraRecyclerView(): RecyclerView {
         val recyclerView = findViewById<RecyclerView>(R.id.main_recycleview)
         recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = LinearLayoutManager(this)
         return recyclerView
     }
 
@@ -47,8 +47,6 @@ class MainActivity : AppCompatActivity() {
         var intent = Intent(this, GitInformationAtitivity::class.java)
         intent.putExtra("git", data)
         startActivity(intent)
-        //Toast.makeText(this, res, Toast.LENGTH_SHORT).show()
     }
 
-    //TODO: procure usar os outros metodos do ciclo de vida1
 }
